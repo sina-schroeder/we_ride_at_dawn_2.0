@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lissabon</title>
+    <link rel="stylesheet" type="text/css" href="/css/style_neu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon:wght@400&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to format time
+            function formatTime(time) {
+                // Parse time string and convert it to local time
+                const localTime = new Date('1970-01-01T' + time + 'Z');
+                return localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+
+            // Parse the query parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedDate = urlParams.get('date');
+            const location = 'Lisbon'; // Hardcoded location for this specific page
+
+            if (selectedDate) {
+                // Create the URL for the API call, including the selected location and date
+                const apiUrl = `unload.php?city=${encodeURIComponent(location)}&date=${encodeURIComponent(selectedDate)}`;
+
+                // Use fetch() to send a GET request to the specified URL
+                fetch(apiUrl)
+                    .then(response => response.json()) // Convert the response to JSON
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                        } else {
+                            // Update the HTML elements with the fetched data
+                            document.getElementById('date').innerText = selectedDate; // Display selected date
+                            // Display sunrise and sunset times from the database
+                            document.getElementById('sunriseTime').innerText = formatTime(data.sunrise);
+                            document.getElementById('sunsetTime').innerText = formatTime(data.sunset);
+                        }
+                    })
+                    .catch(error => {
+                        // Log errors to the console and display an error message
+                        console.error('Error fetching data:', error);
+                        alert('Error fetching data.');
+                    });
+            } else {
+                alert('No date selected.');
+            }
+        });
+    </script>
+</head>
+
+<body class="body-result">
+    <div class="div-result">
+        <div class="title"><p class="title-lissabon"><b>Lissabon</b></p>
+        <br>
+        <span class="date-lissabon" id="date"></span>
+    </div>
+        <div class="content-left-lissabon">
+            <a class="img-2-result" href="/index.html">
+                <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f00d951785c3a833a8c144ddc9b40528d6386b6d134d7d34753122580538c2c8?"
+                class="img-2-result"
+              /> </a>
+          <div class="information-lissabon">
+            <div class="sunrise-lissabon">
+              <span class="title-sunset" id="sunriseTitle">Sunrise: </span>
+              <br />
+              <span class="time-sunrise" id="sunriseTime"> </span>
+              <br />
+              <!--<span  class="date-sunrise"id="selectedDate">Selected Date:</span><span  id="date"></span>-->
+              <br />
+            </div>
+            </div>
+            </div>
+            <div class="content-right-lissabon">
+            <div class="information-lissabon">
+            <div class="sunset-lissabon">
+              <span class="title-sunset" id="sunsetTitle">Sunset:</span>   <span class="time-sunset" id="sunsetTime"></span>
+              <br />
+              <!--<span class="date-sunset"id="selectedDate">Selected Date:</span><span  id="date"></span>-->
+              <br />
+           
+              <br />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

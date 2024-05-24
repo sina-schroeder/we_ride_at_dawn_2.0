@@ -1,0 +1,1076 @@
+*{
+  font-family: 'Bayon', sans-serif;
+  margin: 0;
+}
+
+/*style index.html*/
+.body-index{
+    background-image: url(/img/Startseite-Background.png);
+    background-position: center;
+    background-size: auto;
+  }
+
+  .title{
+    position: absolute;
+  }
+
+  
+  .div-index {
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    color: #efefef;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .content {
+    position: relative;
+    display: flex;
+    margin-top: 170px;
+    width: 640px;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /*.search {
+    border-color: rgba(245, 245, 245, 1);
+    border-style: solid;
+    border-width: 3px;
+    align-self: stretch;
+    display: flex;
+    gap: 20px;
+    font-size: 70px;
+    padding: 0px 40px;
+  }*/
+  
+  .titel-search {
+    flex-grow: 1;
+    flex-basis: auto;
+    font-size: 90px;
+  }
+  
+  .div-date {
+    display: flex;
+    width: 261px;
+    max-width: 100%;
+    gap: 20px;
+    white-space: nowrap;
+    margin: 59px 0 0 61px;
+  }
+  
+
+  
+  /*.img-4 {
+    aspect-ratio: 2.7;
+    object-fit: auto;
+    object-position: center;
+    width: 51px;
+    fill: #efefef;
+    margin: auto 0;
+  }*/
+
+  .Button {
+    border-color: rgba(245, 245, 245, 1);
+    border-style: solid;
+    border-width: 3px;
+    background-color: #efefef;
+    margin-top: 78px;
+    width: 287px;
+    max-width: 100%;
+    align-items: center;
+    color: #A7BA01;
+    justify-content: center;
+  }
+
+  .Button:hover {
+    background-color: #A7BA01;
+    color: #efefef;
+    border-color: #A7BA01
+    
+  }
+
+  .select {
+    padding-right: 30px; /* Add padding for custom arrow */
+    background-image: url('path/to/custom-arrow.png'); /* Use a custom arrow image */
+    background-size: 15px; /* Adjust the size of the custom arrow */
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+
+
+  .dropdown {
+    border-color: rgba(245, 245, 245, 1);
+    background-color: transparent;
+    border-style: solid;
+    border-width: 3px;
+    align-self: stretch;
+    display: flex;
+    padding: 0px 130px;
+    color: white;
+    font-size: 60px;
+  }
+
+  .date-dropdown{
+    border-color: rgba(245, 245, 245, 1);
+  background-color: transparent;
+  border-style: solid;
+  border-width: 3px;
+  align-self: stretch;
+  display: flex;
+  padding: 0px 130px;
+  color: white;
+  font-size: 60px;
+  }
+  
+  
+  .choices {
+    background-color: white;
+    color:#A7BA01;
+    width: 310px;
+    padding: 10px 15px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  
+  .choices:hover {
+    padding-left: 25px;
+    width: 270px;
+    background-color: #A7BA01;
+  }
+
+  .date-reykjavik {
+    font-size: 40px;
+  }
+
+  .date-valletta {
+    font-size: 40px;
+  }
+
+  .date-moskau {
+    font-size: 40px;
+  }
+
+  .date-lissabon {
+    font-size: 40px;
+  }
+
+
+  /*style reykjavik.html*/
+  .body-result{
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url(/img/SunriseSundset.png);
+    background-size: cover;
+  }
+  
+  .div-result {
+    display: flex;
+    font-weight: 400;
+    justify-content: center;
+  }
+  
+  .img-2-result {
+    object-fit: auto;
+    object-position: center;
+    width: 42px;
+    align-self: start;
+    margin: 1.5%;
+  }
+  
+
+  .content-right-reykjavik {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    /*background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+  .content-left-reykjavik {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    /*background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+
+  .title-reykjavik {
+    position: absolute;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 90px;
+  }
+  
+  .information-reykjavik {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 80px;
+  }
+  
+  .sunrise-reykjavik {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-reykjavik {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  /*lissabon.html content*/
+  .content-right-lissabon {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    /*background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+  .content-left-lissabon {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    /*background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+
+  .title-lissabon {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 80px;
+  }
+  
+  .information-lissabon {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 80px;
+  }
+  
+  .sunrise-lissabon {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-lissabon {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  
+  /*style moskau.html*/
+  .content-right-moskau {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    /*background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+  .content-left-moskau {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    /*background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+
+  .title-moskau {
+    position: absolute;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 90px;
+  }
+  
+  .information-moskau {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 80px;
+  }
+  
+  .sunrise-moskau {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-moskau {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+    /*style lissabon.html*/
+    .content-right-lissabon {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      /*background-image: url(/img/Sunset-Hälfte.jpg);
+      background-size: cover;*/
+    }
+  
+    .content-left-lissabon {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      align-items: center;
+      /*background-image: url(/img/Sunrise-Hälfte.jpg);
+      background-size: cover;*/
+    }
+  
+    .information-lissabon {
+      position: relative;
+      width: 100%;
+      max-width: 1005px;
+      gap: 20px;
+      font-size: 70px;
+      line-height: 80px;
+    }
+    
+    .sunrise-lissabon {
+      /*flex-grow: 1;
+      flex-basis: auto;*/
+      padding-left: 28%;
+    }
+    
+    .sunset-lissabon {
+      width: 350px;
+      padding-left: 34%;
+    }
+
+   /*style valletta.html*/
+
+   .content-right-valletta {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    /*background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+  .content-left-valletta {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    align-items: center;
+    /*background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;*/
+  }
+
+
+  .title-valletta {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 80px;
+  }
+  
+  .information-valletta {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 80px;
+  }
+  
+  .sunrise-valletta {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-valletta {
+    width: 350px;
+    padding-left: 34%;
+  }
+  .title-sunset{
+    font-size: 90px;
+  }
+
+  .title-sunrise{
+    font-size: 90px;
+  }
+
+  .date-sunrise{
+    font-size: 50px;
+  }
+  .date-sunset{
+    font-size: 50px;
+  }
+
+  .time-sunset{
+    font-size: 50px;
+  }
+
+ .time-sunrise{
+    font-size: 50px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    .body-index{
+      background-image: none;
+      background-size: auto;
+      background-repeat: no-repeat; /* Prevents the background image from repeating */
+      background-position: center;
+    }
+
+    .body-result{
+
+      background-image: none;
+      background-size: auto;
+    }
+  
+    .div-date {
+      align-items: center;
+      margin: 20px 0;
+      display: inline;
+    }
+  
+    .date {
+      margin-top: 40px;
+      font-size: 40px;
+    }
+  
+    .Button {
+      margin-top: 40px;
+      font-size: 40px;
+      width: 180px;
+    }
+  
+    .dropdown {
+      font-size: 40px;
+    }
+  
+    .choices {
+      width: 250px;
+      font-size: 20px;
+    }
+  
+    .div-result {
+      display: flex;
+      flex-direction: column;
+      font-weight: 400;
+      justify-content: center;
+    }
+    
+    .content-right-valletta {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunset-Hälfte.jpg);
+      background-size: cover;
+    }
+  
+    .content-left-valletta {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunrise-Hälfte.jpg);
+      background-size: cover;
+    }
+    .sunrise-valletta {
+      /*flex-grow: 1;
+      flex-basis: auto;*/
+      padding-left: 28%;
+    }
+    
+    .sunset-valletta {
+      width: 350px;
+      padding-left: 34%;
+    }
+  
+    .title-sunset{
+      font-size: 90px;
+    }
+  
+    .title-sunrise{
+      font-size: 90px;
+    }
+  
+    .date-sunrise{
+      font-size: 50px;
+    }
+    .date-sunset{
+      font-size: 50px;
+    }
+  
+    .time-sunset{
+      font-size: 50px;
+    }
+  
+   .time-sunrise{
+      font-size: 50px;
+    }
+    
+    .content-right-reykjavik {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunset-Hälfte.jpg);
+      background-size: cover;
+    }
+  
+    .content-left-reykjavik {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunrise-Hälfte.jpg);
+      background-size: cover;
+    }
+    .sunrise-reykjavik {
+      /*flex-grow: 1;
+      flex-basis: auto;*/
+      padding-left: 28%;
+    }
+    
+    .sunset-reykjavik {
+      width: 350px;
+      padding-left: 34%;
+    }
+
+    .content-right-moskau {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunset-Hälfte.jpg);
+      background-size: cover;
+    }
+  
+    .content-left-moskau {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunrise-Hälfte.jpg);
+      background-size: cover;
+    }
+    .sunrise-moskau {
+      /*flex-grow: 1;
+      flex-basis: auto;*/
+      padding-left: 28%;
+    }
+    
+    .sunset-moskau {
+      width: 350px;
+      padding-left: 34%;
+    }
+
+    .content-right-lissabon {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunset-Hälfte.jpg);
+      background-size: cover;
+    }
+  
+    .content-left-lissabon {
+      display: flex;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 50vh;
+      align-items: center;
+      background-image: url(/img/Sunrise-Hälfte.jpg);
+      background-size: cover;
+    }
+    .sunrise-lissabon {
+      /*flex-grow: 1;
+      flex-basis: auto;*/
+      padding-left: 28%;
+    }
+    
+    .sunset-lissabon {
+      width: 350px;
+      padding-left: 34%;
+    }
+
+  } 
+
+  /* Responsive styles */
+@media (max-width: 768px) {
+  .body-index{
+    background-size: auto;
+  }
+
+  .body-result{
+
+    background-image: none;
+    background-size: auto;
+  }
+
+  .div-date {
+    align-items: center;
+    margin: 20px 0;
+    display: inline;
+  }
+
+  .date {
+    margin-top: 40px;
+    font-size: 40px;
+  }*/
+
+  .Button {
+    margin-top: 40px;
+    font-size: 40px;
+    width: 180px;
+  }
+
+  .dropdown {
+    font-size: 40px;
+  }
+
+  .choices {
+    width: 250px;
+    font-size: 20px;
+  }
+
+  .div-result {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    justify-content: center;
+  }
+  
+  .content-right-valletta {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-valletta {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-valletta {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-valletta {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  .title-sunset{
+    font-size: 90px;
+  }
+
+  .title-sunrise{
+    font-size: 90px;
+  }
+
+  .date-sunrise{
+    font-size: 50px;
+  }
+  .date-sunset{
+    font-size: 50px;
+  }
+
+  .time-sunset{
+    font-size: 50px;
+  }
+
+ .time-sunrise{
+    font-size: 50px;
+  }
+
+  .content-right-reykjavik {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-reykjavik {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-reykjavik {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-reykjavik {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  .content-right-moskau {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-moskau {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-moskau {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-moskau {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  .content-right-lissabon {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-lissabon {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-lissabon {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 28%;
+  }
+  
+  .sunset-lissabon {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  
+  
+}
+
+@media (max-width: 480px) {
+  .body-index{
+    background-image: url(/img/Startseite-Background.png);
+    background-size: auto;
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center;
+  }
+
+  .body-index{
+    background-image: url(/img/Startseite-Background.png);
+    background-size: auto;
+  }
+
+  .div-index {
+    font-size: 30px;
+  }
+
+  .titel-search {
+    font-size: 60px;
+  }
+
+  .div-date {
+    margin: 20px 0;
+    display: inline;
+  }
+
+
+  .dropdown {
+    padding: 0px 100px;
+    font-size: 30px;
+  }
+
+  .choices {
+    width: 200px;
+    font-size: 15px;
+  }
+  
+  .content-right-valletta {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-valletta {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-valletta {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 24%;
+  }
+  
+  .sunset-valletta {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  .title-sunset{
+    font-size: 60px;
+  }
+
+  .title-sunrise{
+    font-size: 60px;
+  }
+
+  .date-sunrise{
+    font-size: 30px;
+  }
+  .date-sunset{
+    font-size: 30px;
+  }
+
+  .time-sunset{
+    font-size: 30px;
+  }
+
+ .time-sunrise{
+    font-size: 30px;
+  }
+  .information-valletta {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 40px;
+  }
+
+  .content-right-moskau {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-moskau {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-moskau {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 24%;
+  }
+  
+  .sunset-moskau {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  .information-moskau {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 40px;
+  }
+
+  .content-right-lissabon {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-lissabon {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-lissabon {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 24%;
+  }
+  
+  .sunset-lissabon {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  .information-lissabon {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 40px;
+  }
+
+  .content-right-reykjavik {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunset-Hälfte.jpg);
+    background-size: cover;
+  }
+
+  .content-left-reykjavik {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background-image: url(/img/Sunrise-Hälfte.jpg);
+    background-size: cover;
+  }
+  .sunrise-reykjavik {
+    /*flex-grow: 1;
+    flex-basis: auto;*/
+    padding-left: 24%;
+  }
+  
+  .sunset-reykjavik {
+    width: 350px;
+    padding-left: 34%;
+  }
+
+  .information-reykjavik {
+    position: relative;
+    width: 100%;
+    max-width: 1005px;
+    gap: 20px;
+    font-size: 70px;
+    line-height: 40px;
+  }
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reykjavik</title>
+    <link rel="stylesheet" type="text/css" href="/css/style_neu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon:wght@400&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to format time and convert to Swiss timezone
+            function formatTime(time) {
+                // Parse time string and convert it to local time (Swiss timezone)
+                const localTime = new Date('1970-01-01T' + time + 'Z');
+                // Adjust for the time zone difference
+                const adjustedTime = new Date(localTime.getTime() + localTime.getTimezoneOffset() * 60000);
+                return adjustedTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+
+            // Parse the query parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const selectedDate = urlParams.get('date');
+            const location = 'Reykjavik'; // Hardcoded location for this specific page
+
+            if (selectedDate) {
+                // Create the URL for the API call, including the selected location and date
+                const apiUrl = `unload.php?city=${encodeURIComponent(location)}&date=${encodeURIComponent(selectedDate)}`;
+
+                // Use fetch() to send a GET request to the specified URL
+                fetch(apiUrl)
+                    .then(response => response.json()) // Convert the response to JSON
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                        } else {
+                            // Update the HTML elements with the fetched data
+                            document.getElementById('date').innerText = selectedDate; // Display selected date
+                            // Convert and display sunrise and sunset times in Swiss timezone
+                            document.getElementById('sunriseTime').innerText = formatTime(data.sunrise);
+                            document.getElementById('sunsetTime').innerText = formatTime(data.sunset);
+                        }
+                    })
+                    .catch(error => {
+                        // Log errors to the console and display an error message
+                        console.error('Error fetching data:', error);
+                        alert('Error fetching data.');
+                    });
+            } else {
+                alert('No date selected.');
+            }
+        });
+    </script>
+</head>
+<body class="body-result">
+    <div class="div-result">
+        <div class="title"><p class="title-reykjavik"><b>Reykjavik</b></p>
+            <br>
+            <span class="date-reykjavik" id="date"></span>
+            </div>
+        <div class="content-left-reykjavik">
+            <a class="img-2-result" href="/index.html">
+                <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/f00d951785c3a833a8c144ddc9b40528d6386b6d134d7d34753122580538c2c8?"
+                class="img-2-result"
+              /> </a>
+          <div class="information-reykjavik">
+            <div class="sunrise-reykjavik">
+              <span class="title-sunset" id="sunriseTitle">Sunrise: </span> 
+              <br />
+              <span class="time-sunrise" id="sunriseTime"></span>
+             <!-- <span  class="date-sunrise"id="selectedDate">Selected Date:</span><span  id="date"></span>-->
+            </div>
+            </div>
+            </div>
+            <div class="content-right-reykjavik">
+            <div class="information-reykjavik">
+            <div class="sunset-reykjavik">
+              <span class="title-sunset" id="sunsetTitle">Sunset:</span>
+              <br />
+              <span class="time-sunset" id="sunsetTime"></span>
+              <!--<span class="date-sunset"id="selectedDate">Selected Date:</span><span  id="date"></span>-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

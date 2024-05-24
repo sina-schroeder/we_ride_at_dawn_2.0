@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sunrise and Sunset</title>
+    <link rel="stylesheet" type="text/css" href="/css/style_neu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bayon:wght@400&display=swap" rel="stylesheet">
+    <script src="./js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to format time
+            function formatTime(time) {
+                return new Date(time).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            }
+
+            // Add an event listener to the button that triggers on click
+            document.getElementById('show-me-btn').addEventListener('click', function() {
+                const location = document.getElementById('location-select').value;
+                const selectedDate = document.getElementById('date-select').value;
+
+                // Redirect to the city-specific page with the selected date as a query parameter
+                window.location.href = `${location}.html?date=${encodeURIComponent(selectedDate)}`;
+            });
+
+            // Calendar functionality (if there's any additional script for the calendar, it should go here)
+            // Example: Initialize a calendar or handle specific date selection logic
+        });
+    </script>
+</head>
+<body class="body-index">
+  <div id="date"></div>
+  <div class="sunriseTime" id="sunriseTime"></div>
+  <div class="sunsetTime" id="sunsetTime"></div>
+  <div class="div-index">
+    <div class="content">
+      <div >
+        <!--<span class="titel-search"> Auswahl</span>-->
+        <select class="dropdown" id="location-select">
+          <option class="choices" value="Reykjavik">Reykjavik</option>
+          <option class="choices" value="Moscow">Moskau</option>
+          <option class="choices" value="Lisbon">Lissabon</option>
+          <option class="choices" value="Valletta">Valletta</option>
+        </select>
+      </div>
+      <div class="div-date">
+        <input type="date" class="date-dropdown" id="date-select">
+      </div>
+      <div class="date"></div>
+      <div id="calendar"></div>
+     
+    </div>
+    <div class="Button" id="show-me-btn">show me</div>
+  </div>
+</body>
+</html>
